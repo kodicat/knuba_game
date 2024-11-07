@@ -1,0 +1,15 @@
+{
+  "name": "vim_quest",
+  "version": "0.1.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "parcel src/index.html -p 8000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
