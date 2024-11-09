@@ -2,34 +2,32 @@ import { Scene } from 'phaser';
 
 export class Game extends Scene
 {
-    camera: Phaser.Cameras.Scene2D.Camera;
-    background: Phaser.GameObjects.Image;
-    msg_text : Phaser.GameObjects.Text;
-
     constructor ()
     {
-        super('Game');
+        super('game');
     }
 
     create ()
     {
-        this.camera = this.cameras.main;
-        this.camera.setBackgroundColor(0x00ff00);
+        const map = this.make.tilemap({key: 'level_1'});
+        const tileset = map.addTilesetImage('tileset_day_field', 'tiles');
 
-        this.background = this.add.image(512, 384, 'background');
-        this.background.setAlpha(0.5);
+        const groundLayer = map.createLayer('ground', tileset!);
+        const fenceLayer = map.createLayer('fence', tileset!);
 
-        this.msg_text = this.add.text(512, 384, 'Make something fun!\nand share it with us:\nsupport@phaser.io', {
-            fontFamily: 'Arial Black', fontSize: 38, color: '#ffffff',
-            stroke: '#000000', strokeThickness: 8,
-            align: 'center'
+        groundLayer?.setCollisionByProperty({collides: true});
+        fenceLayer?.setCollisionByProperty({collides: true});
+
+        const debugGraphics = this.add.graphics().setAlpha(0.7);
+        groundLayer?.renderDebug(debugGraphics, {
+            tileColor: null,
+            collidingTileColor: new Phaser.Display.Color(0, 255, 255, 255),
+            faceColor: new Phaser.Display.Color(0, 0, 0, 255)
         });
-        this.msg_text.setOrigin(0.5);
-
-        this.input.once('pointerdown', () => {
-
-            this.scene.start('GameOver');
-
+        fenceLayer?.renderDebug(debugGraphics, {
+            tileColor: null,
+            collidingTileColor: new Phaser.Display.Color(0, 255, 255, 255),
+            faceColor: new Phaser.Display.Color(0, 0, 0, 255)
         });
     }
 }
