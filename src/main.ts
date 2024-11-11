@@ -7,20 +7,22 @@ import Preloader from './scenes/Preloader';
 //  https://newdocs.phaser.io/docs/3.70.0/Phaser.Types.Core.GameConfig
 const config: Types.Core.GameConfig = {
     type: Phaser.AUTO,
-    width: 1024,
-    height: 768,
+    width: 300,
+    height: 200,
     parent: 'game-container',
-    scale: {
-        mode: Phaser.Scale.FIT,
-        autoCenter: Phaser.Scale.CENTER_BOTH
-    },
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: { x: 0, y: 0}
+            gravity: { x: 0, y: 0},
+            debug: true
         }
     },
-    scene: [Preloader, Game]
+    scene: [Preloader, Game],
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        zoom: 2
+    }
 };
 
 export default new Phaser.Game(config);

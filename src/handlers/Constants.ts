@@ -1,0 +1,1 @@
+export const IGNORED_KEYS = ['Shift', 'Alt', 'Control', 'Meta'];
