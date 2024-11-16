@@ -1,7 +1,6 @@
 import { Scene } from 'phaser';
 import KeyPressLogger from '../menu_elements/KeyPressLogger';
 import { createPlayerAnims } from '../characters/PlayerAnims';
-import Player from '../characters/PlayerActions';
 import KeyPressHandler from '../handlers/KeyPressHandler';
 import { CONFIGURATION } from '../Configuration';
 import PlayerActions from '../characters/PlayerActions';

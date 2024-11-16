@@ -84,9 +84,70 @@
          "width":70,
          "x":0,
          "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":5,
+         "name":"text",
+         "objects":[
+                {
+                 "height":16,
+                 "id":10,
+                 "name":"j",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":128,
+                 "y":288
+                }, 
+                {
+                 "height":16,
+                 "id":13,
+                 "name":"l",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":144,
+                 "y":272
+                }, 
+                {
+                 "height":16,
+                 "id":12,
+                 "name":"k",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":128,
+                 "y":256
+                }, 
+                {
+                 "height":16,
+                 "id":11,
+                 "name":"h",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":112,
+                 "y":272
+                }],
+         "opacity":1,
+         "properties":[
+                {
+                 "name":"text",
+                 "type":"string",
+                 "value":""
+                }],
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
         }],
- "nextlayerid":5,
- "nextobjectid":1,
+ "nextlayerid":6,
+ "nextobjectid":14,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",
