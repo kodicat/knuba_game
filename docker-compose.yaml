@@ -1,0 +1,8 @@
+services:
+  vim_quest_app:
+    build: .
+    image: vim_quest
+    container_name: vim_quest
+    restart: unless-stopped
+    ports:
+      - 8000:8000
