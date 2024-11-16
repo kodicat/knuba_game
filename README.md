@@ -22,3 +22,16 @@ We have provided a default project structure to get you started. This is as foll
 - `src/global.d.ts` - Global TypeScript declarations, provide types information.
 - `src/scenes/` - The Phaser Scenes are in this folder.
 - `public/assets` - Contains the static assets used by the game.
+
+
+## Run locally in docker (port 8000)
+
+Start game
+```
+docker compose up --build -d
+```
+
+Close game
+```
+docker compose down
+```
